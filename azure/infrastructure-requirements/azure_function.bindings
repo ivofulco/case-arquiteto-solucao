@@ -1,0 +1,11 @@
+[Function("GetStatusFunction")]
+public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req,
+        [CosmosDBInput(
+           databaseName: "%COSMOSDB_DATABASE_NAME%",
+           containerName:"%COSMOSDB_DATABASE_COL%",
+           Connection  = "COSMOSDB_CONNECTION_STRING",
+           Id = "{Query.deviceId}",
+           PartitionKey = "{Query.deviceId}")] DeviceState? deviceStatus)
+{
+  ...
+}

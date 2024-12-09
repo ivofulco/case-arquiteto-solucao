@@ -1,0 +1,35 @@
+// Diagram elements
+Access and Security [icon: lock] {
+  Microsoft Entra ID [icon: azure-active-directory, label: "Entra ID"]
+  API Management [icon: azure-api-management]
+}
+
+Data Services [icon: database] {
+  Azure Blob Storage [icon: azure-blob-storage]
+  Azure Cosmos DB [icon: azure-cosmos-db]
+}
+
+Compute [icon: server] {
+  Function Apps [icon: azure-functions]
+}
+
+"CI/CD" [icon: github] {
+  GitHub Actions [icon: github-actions]
+}
+
+Monitoring [icon: monitor] {
+  Azure Monitor [icon: azure-monitor]
+}
+
+Content Delivery [icon: globe] {
+  CDN [icon: azure-cdn]
+}
+
+// Connections
+Microsoft Entra ID > API Management
+API Management > Function Apps
+Function Apps > Azure Blob Storage
+Function Apps > Azure Cosmos DB
+CDN > Azure Blob Storage
+Function Apps < GitHub Actions
+Function Apps < Azure Monitor
